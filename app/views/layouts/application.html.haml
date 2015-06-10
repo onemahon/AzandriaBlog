@@ -1,0 +1,13 @@
+!!! 5
+%html
+  %head
+    %title= page_title
+    = stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true
+    = javascript_include_tag 'application', 'data-turbolinks-track' => true
+    = csrf_meta_tags
+
+  %body
+    = bootstrap_flash
+    %h1.header= application_name
+
+    .yield= yield

@@ -1,0 +1,3 @@
+%h3= link_to post.title, post_path(post)
+%p= markdown(content_truncated(post.content))
+%p= l post.created_at, format: :long

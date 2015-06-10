@@ -1,0 +1,4 @@
+- model_class = Post
+- @posts.each do |post|
+  = render post, :post => post, :shortened => true
+  %hr
