@@ -31,10 +31,9 @@ gem 'spring',        group: :development
 # gem 'bcrypt', '~> 3.1.7'
 
 # Use unicorn as the app server
-# gem 'unicorn'
+gem 'unicorn'
 
-# Use Capistrano for deployment
-# gem 'capistrano-rails', group: :development
+gem 'rack-timeout'
 
 # Use debugger
 # gem 'debugger', group: [:development, :test]
@@ -55,4 +54,19 @@ gem 'haml'
 gem 'redcarpet'
 gem 'coderay'
 gem 'autoprefixer-rails'
+
+
+group :development do
+  gem 'knife-solo'
+  
+  gem 'capistrano'
+  gem 'capistrano-rails'
+  gem 'capistrano-bundler'
+  gem 'capistrano-rbenv'
+  gem 'capistrano-passenger'
+  
+  # Third party
+  gem 'capistrano-secrets-yml'
+  
+end
 

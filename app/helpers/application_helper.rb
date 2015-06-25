@@ -6,7 +6,7 @@ module ApplicationHelper
   end
 
   def application_name
-    'Azandria Blog'
+    'Azandria Blog.'
   end
 
   def page_title
