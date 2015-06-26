@@ -5,7 +5,7 @@ set -e
 # since nginx and unicorn accept the same signals
 
 # Feel free to change any of the following variables for your app:
-TIMEOUT=${TIMEOUT-60}
+TIMEOUT=${TIMEOUT-30}
 APP_ROOT=/var/www/<%= node['app'] %>/current
 PID=$APP_ROOT/tmp/pids/unicorn.pid
 CMD="cd $APP_ROOT; ~/.rbenv/bin/rbenv exec bundle exec unicorn -D -c $APP_ROOT/config/unicorn.rb -E production"
