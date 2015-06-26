@@ -64,4 +64,4 @@ crashlytics.properties
 crashlytics-build.properties
 
 # Chef configuration items
-/config/chef/nodes/104.131.174.165.json
+/config/chef/nodes/joe.azandria.com.json

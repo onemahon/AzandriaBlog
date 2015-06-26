@@ -6,7 +6,7 @@ service 'ssh' do
   supports [:status, :restart]
 end
 
-# modify port
+# modify port	
 bash "modify port" do
   code <<-EOH
     sed -i '/Port.*/d' /etc/ssh/sshd_config
@@ -45,7 +45,4 @@ bash "disable dns" do
   notifies :restart, "service[ssh]", :delayed
   not_if "grep -xq 'UseDNS no' /etc/ssh/sshd_config"
 end
-
-
-
 

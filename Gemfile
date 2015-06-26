@@ -58,6 +58,12 @@ gem 'autoprefixer-rails'
 
 
 group :development do
-  gem 'knife-solo', '~> 0.4.2'
+  gem 'knife-solo'
+  
+  gem 'capistrano'
+  gem 'capistrano-rails'
+  gem 'capistrano-bundler'
+  gem 'capistrano-rbenv'
+  gem 'capistrano-passenger'
 end
 
