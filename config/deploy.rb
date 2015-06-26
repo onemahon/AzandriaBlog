@@ -2,7 +2,6 @@ lock "3.4.0"
 
 set :application, "blaugh"
 set :repo_url, "git@bitbucket.org:onemahon/azandria-blaugh.git.git"
-set :branch, fetch(:branch, "chef-test")
 
 set :deploy_to, "/var/www/#{fetch(:application)}"
 set :deploy_user, "rincewind"
