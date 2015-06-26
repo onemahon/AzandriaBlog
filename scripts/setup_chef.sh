@@ -25,7 +25,7 @@ knife solo cook root@$IP
 ssh-copy-id -i ~/.ssh/id_rsa.pub -p $PORT $USER@$IP
 
 # upload app
-cd .. && cap production setup:all
+cd ../.. && cap production setup:all
 
 # restart nginx
 ssh -p $PORT -t $USER@$IP 'sudo service nginx restart'
