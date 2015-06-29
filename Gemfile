@@ -33,6 +33,8 @@ gem 'spring',        group: :development
 # Use unicorn as the app server
 gem 'unicorn'
 
+gem 'rack-timeout'
+
 # Use debugger
 # gem 'debugger', group: [:development, :test]
 
