@@ -1,5 +1,5 @@
 upstream unicorn {
-  server unix:/tmp/unicorn.<%= node['app'] %>.sock fail_timeout=0;
+  server unix:/var/sockets/unicorn.<%= node['app'] %>.sock fail_timeout=0;
 }
 
 server {
@@ -9,7 +9,7 @@ server {
 
 server {
   listen 80 default deferred;
-  server_name <%= node['app'] %>.com;
+  server_name <%= node['app'] %>-app;
   root /var/www/<%= node['app'] %>/current/public;
 
   location ^~ /assets/ {
