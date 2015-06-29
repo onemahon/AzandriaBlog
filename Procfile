@@ -1,1 +1,1 @@
-web: bundle exec unicorn -p 1787 -c ./config/unicorn.rb
+web: bundle exec unicorn -p 80 -c ./config/unicorn.rb
