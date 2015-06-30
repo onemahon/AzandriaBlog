@@ -65,3 +65,6 @@ crashlytics-build.properties
 
 # Chef configuration items
 /config/chef/nodes/joe.azandria.com.json
+
+# Ignore secrets, capistrano-secrets will handle it
+/config/secrets.yml
