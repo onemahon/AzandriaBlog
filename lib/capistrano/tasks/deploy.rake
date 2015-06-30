@@ -8,8 +8,8 @@ namespace :deploy do
       exit
     end
   end
-
-  %w[start stop restart].each do |command|
+ 
+  def do_command(command)
     desc "#{command} Unicorn server."
     task command do
       on roles(:app) do
@@ -18,8 +18,13 @@ namespace :deploy do
     end
   end
 
+  do_command(start)
+  do_command(stop)
+  do_command(restart)
+
   before :deploy, "deploy:check_revision"
   after :deploy, "deploy:restart"
   after :rollback, "deploy:restart"
+  
 
 end
