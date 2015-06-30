@@ -64,5 +64,9 @@ group :development do
   gem 'capistrano-bundler'
   gem 'capistrano-rbenv'
   gem 'capistrano-passenger'
+  
+  # Third party
+  gem 'capistrano-secrets-yml'
+  
 end
 
