@@ -14,11 +14,11 @@ PORT=$3
 # install chef
 cd ../config/chef && knife solo prepare -p $PORT $USER@$IP
 
-# execute the run list
-knife solo cook -p $PORT $USER@$IP
-
 # upload key for user
 ssh-copy-id -i ~/.ssh/id_rsa.pub -p $PORT $USER@$IP
+
+# execute the run list
+knife solo cook -p $PORT $USER@$IP
 
 # upload app
 cd ../..
