@@ -10,7 +10,7 @@ worker_processes (ENV['RAILS_ENV'] == 'production' ? 4 : 1)
 # You can listen on a port or a socket. Listening on a socket is good in a
 # production environment, but listening on a port can be useful for local
 # debugging purposes.
-listen app_path + '/tmp/unicorn.sock', backlog: 64
+listen "/var/sockets/unicorn.blaugh.sock"
 
 # For development, you may want to listen on port 3000 so that you can make sure
 # your unicorn.rb file is soundly configured.
@@ -98,7 +98,6 @@ end
 # stdout_path "/var/www/blaugh/log/unicorn.log"
 # 
 # # Unicorn socket
-# listen "/var/sockets/unicorn.blaugh.sock"
 # 
 # # Number of processes
 # # worker_processes 4
