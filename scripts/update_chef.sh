@@ -11,8 +11,7 @@ USER=$1
 IP=$2
 PORT=$3
 
-# install chef
-cd ../config/chef && knife solo prepare -p $PORT $USER@$IP
+cd ../config/chef
 
 # upload key for user
 ssh-copy-id -i ~/.ssh/id_rsa.pub -p $PORT $USER@$IP
