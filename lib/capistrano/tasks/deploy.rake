@@ -18,9 +18,9 @@ namespace :deploy do
     end
   end
 
-  do_command(start)
-  do_command(stop)
-  do_command(restart)
+  do_command('start')
+  do_command('stop')
+  do_command('restart')
 
   before :deploy, "deploy:check_revision"
   after :deploy, "deploy:restart"
