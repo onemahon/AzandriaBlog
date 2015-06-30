@@ -12,7 +12,7 @@ IP=$2
 PORT=$3
 
 # install chef
-knife solo prepare -p $PORT $USER@$IP
+cd ../config/chef && knife solo prepare -p $PORT $USER@$IP
 
 # execute the run list
 knife solo cook -p $PORT $USER@$IP
