@@ -26,6 +26,7 @@ namespace :setup do
 #     end
 #   end
 
+  before "deploy:published", "setup"
   after "deploy:published", "deploy:start"
 
 end
