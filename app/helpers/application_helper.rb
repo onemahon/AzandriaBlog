@@ -1,9 +1,4 @@
 module ApplicationHelper
-  class CodeRayify < Redcarpet::Render::HTML
-    def block_code(code, language)
-      CodeRay.scan(code, language).div
-    end
-  end
 
   def application_name
     'Azandria Blog.'
@@ -13,19 +8,39 @@ module ApplicationHelper
     'Joe Mahon\'s Blog'
   end
 
-  def markdown(text)
-    # From https://www.codefellows.org/blog/how-to-create-a-markdown-friendly-blog-in-a-rails-app
-    coderayified = CodeRayify.new(:filter_html => true,
-                                  :hard_wrap => true)
-    options = {
-        :fenced_code_blocks => true,
-        :no_intra_emphasis => true,
-        :autolink => true,
-        :lax_html_blocks => true,
-    }
-    markdown_to_html = Redcarpet::Markdown.new(coderayified, options)
-    markdown_to_html.render(text).html_safe
+  def main_navigation
+    [
+      {
+        text: 'twitter',
+        link: 'http://twitter.com/onemahon'
+      },
+      {
+        text: 'linked in',
+        link: 'https://www.linkedin.com/in/josephmahon'
+      }
+    ]
   end
 
+  def mobile_nav
+    main_navigation
+  end
+
+  def random_jumbotron_image
+    period = period_of_day
+
+    file_names = Dir.glob("app/assets/images/headers/#{period}/*").map{|f| File.basename(f) }
+    "headers/#{period}/#{file_names.shuffle.first}"
+  end
+
+  def period_of_day
+    case Time.now.hour
+      when 7..5
+        'day'
+      when 5..9
+        'dusk'
+      else
+        'night'
+    end
+  end
 
 end

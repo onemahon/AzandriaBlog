@@ -1,0 +1,69 @@
+// Handy tool: http://www.sasstoscss.com/
+//
+@import "vendor/materialize/components/color";
+$primary-color: color("grey", "darken-4") !default;
+$link-color: rgb(38, 166, 154) !default;
+$button-color: rgb(38, 166, 154) !default;
+$body-background-color: #1a1d20 !default;
+@import 'vendor/materialize/materialize';
+
+@import 'https://fonts.googleapis.com/icon?family=Material+Icons';
+
+/* Custom Stylesheet */
+/**
+ * Use this file to override Materialize files so you can update
+ * the core Materialize files in the future
+ *
+ * Made By MaterializeCSS.com
+ */
+
+body {
+  background-color: #212121;
+  color: #c7c7c7;
+}
+
+hr {
+  border-color: #414141;
+}
+
+.parallax-image {
+  // TODO: shrinks / skews image on mobile
+  width: 100%;
+}
+
+.parallax-container {
+  min-height: 380px;
+  line-height: 0;
+  height: auto;
+  color: rgba(255,255,255,.9);
+}
+.parallax-container .section {
+  width: 100%;
+}
+
+@media only screen and (max-width : 992px) {
+  .parallax-container .section {
+    position: absolute;
+    top: 40%;
+  }
+  #index-banner .section {
+    top: 10%;
+  }
+}
+
+@media only screen and (max-width : 600px) {
+  #index-banner .section {
+    top: 0;
+  }
+}
+
+.icon-block {
+  padding: 0 15px;
+}
+.icon-block .material-icons {
+  font-size: inherit;
+}
+
+footer.page-footer {
+  margin: 0;
+}

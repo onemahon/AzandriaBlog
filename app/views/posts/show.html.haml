@@ -1,16 +1,19 @@
-- model_class = Post
-.page-header
-  %h1= t '.title', :default => Post
+.container
+  .section
+    .row
+      %h1= post.title
+      %p= MarkdownParser.markdown(content_truncated(post.content)).html_safe
+      %p= l post.created_at, format: :long
 
-.fieldset
-  %dl
-    %dt.label.label-default= model_class.human_attribute_name(:title)
-    %dd
-      %pre.prettyprint= @post.title
-    %dt.label.label-default= model_class.human_attribute_name(:content)
-    %dd
-      %pre.prettyprint= @post.content
+      = link_to t('.back'), posts_path, :class => 'btn btn-default'
 
-.form-group
-  = link_to t('.back', :default => t("helpers.links.back")), posts_path, :class => 'btn btn-default'
 
+      -#.fieldset
+      -#  %dl
+      -#    %dt.label.label-default= model_class.human_attribute_name(:title)
+      -#    %dd
+      -#      %pre.prettyprint= @post.title
+      -#    %dt.label.label-default= model_class.human_attribute_name(:content)
+      -#    %dd
+      -#      %pre.prettyprint= @post.content
+      -#

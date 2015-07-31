@@ -6,8 +6,27 @@
     = javascript_include_tag 'application', 'data-turbolinks-track' => true
     = csrf_meta_tags
 
-  %body
-    = bootstrap_flash
-    %h1.header= application_name
+  %body{ class: page_class }
+    %nav{ role: 'navigation' }
+      .nav-wrapper.container
+        = link_to application_name, root_path, id: 'logo-container', class: 'brand-logo'
+        %ul.right.hide-on-med-and-down
+          - main_navigation.each do |nav_hash|
+            %li= link_to nav_hash[:text], nav_hash[:link]
+        %ul.side-nav#nav-mobile
+          - mobile_nav.each do |nav_hash|
+            %li= link_to nav_hash[:text], nav_hash[:link]
+        =link_to '#', class: 'button-collapse', data: { activates: 'nav-mobile' } do
+          %i.material-icons menu
 
     .yield= yield
+
+    :javascript
+      (function($){
+        $(function(){
+
+          $('.button-collapse').sideNav();
+          $('.parallax').parallax();
+
+        }); // end of document ready
+      })(jQuery); // end of jQuery name space
