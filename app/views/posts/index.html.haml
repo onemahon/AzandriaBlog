@@ -1,4 +1,23 @@
-- model_class = Post
-- @posts.each do |post|
-  = render post, :post => post, :shortened => true
-  %hr
+.parallax-container#index-banner
+  .section.no-pad-bot
+    .container
+      %br
+      %br
+      %h1.header.center This Is My Blog
+      .row.center
+        %h5.header.col.s12.light Cool things, written by me
+      .row.center
+        = link_to 'Azandria', 'http://azandria.com', class: 'btn-large waves-effect'
+  .parallax
+    = image_tag random_jumbotron_image, alt: 'Main Image', class: 'parallax-image'
+
+.container
+  .section
+    .row
+      - @posts.order(created_at: :desc).first(3).each do |post|
+        .col.s12.m4
+          = render post, :post => post, :shortened => true
+  - @posts.limit(100).order(created_at: :desc).offset(3).each do |post|
+    .row
+      .col.s12.m12
+        = render post, :post => post, :shortened => true

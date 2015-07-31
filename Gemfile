@@ -6,7 +6,7 @@ gem 'rails', '4.1.4'
 # Use postgresql as the database for Active Record
 gem 'pg'
 # Use SCSS for stylesheets
-gem 'sass-rails', '~> 4.0.3'
+gem 'sass-rails', '~> 5.0'
 
 # Use Uglifier as compressor for JavaScript assets
 gem 'uglifier', '>= 1.3.0'
@@ -44,9 +44,8 @@ gem 'tzinfo-data'
 gem 'validates_formatting_of'
 gem 'activeadmin', github: 'gregbell/active_admin'
 gem 'devise', github: 'plataformatec/devise'
-gem 'bootstrap-sass', github: 'twbs/bootstrap-sass'
-gem 'bootstrap-sass-extras'
 
+# gem 'materialize-sass'
 
 # Custom
 
@@ -58,15 +57,17 @@ gem 'autoprefixer-rails'
 
 group :development do
   gem 'knife-solo'
-  
+
   gem 'capistrano'
   gem 'capistrano-rails'
   gem 'capistrano-bundler'
   gem 'capistrano-rbenv'
   gem 'capistrano-passenger'
-  
+
   # Third party
   gem 'capistrano-secrets-yml'
-  
+
+  gem 'quiet_assets'
+
 end
 
