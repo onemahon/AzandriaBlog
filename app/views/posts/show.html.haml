@@ -2,6 +2,7 @@
   .section
     .row
       %h1= post.title
+      -# TODO: markdown doesn't seem to be working correctly
       %p= MarkdownParser.markdown(content_truncated(post.content)).html_safe
       %p= l post.created_at, format: :long
 
