@@ -44,6 +44,10 @@ GEM
       activesupport (= 4.1.4)
       builder (~> 3.1)
       erubis (~> 2.7.0)
+    active_admin_editor (1.1.0)
+      activeadmin (>= 0.4.0)
+      ejs
+      rails (>= 3.0.0)
     activemodel (4.1.4)
       activesupport (= 4.1.4)
       builder (~> 3.1)
@@ -124,6 +128,7 @@ GEM
     coffee-script-source (1.9.1.1)
     colorize (0.7.7)
     diff-lcs (1.2.5)
+    ejs (1.1.1)
     erubis (2.7.0)
     execjs (2.5.2)
     ffi (1.9.8)
@@ -168,6 +173,8 @@ GEM
     mail (2.5.4)
       mime-types (~> 1.16)
       treetop (~> 1.4.8)
+    materialize-sass (0.95.2)
+      sass (~> 3.1)
     method_source (0.8.2)
     mime-types (1.25.1)
     minitest (5.7.0)
@@ -324,6 +331,7 @@ PLATFORMS
   ruby
 
 DEPENDENCIES
+  active_admin_editor
   activeadmin!
   autoprefixer-rails
   bundler
@@ -340,6 +348,7 @@ DEPENDENCIES
   jbuilder (~> 2.0)
   jquery-rails
   knife-solo
+  materialize-sass
   pg
   quiet_assets
   rack-timeout
@@ -355,4 +364,4 @@ DEPENDENCIES
   validates_formatting_of
 
 BUNDLED WITH
-   1.10.3
+   1.10.6

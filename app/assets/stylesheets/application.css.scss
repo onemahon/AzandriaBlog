@@ -1,11 +1,14 @@
+//= require active_admin/editor/wysiwyg
+//= require posts
+
 // Handy tool: http://www.sasstoscss.com/
 //
-@import "vendor/materialize/components/color";
+@import "materialize/components/color";
 $primary-color: color("grey", "darken-4") !default;
 $link-color: rgb(38, 166, 154) !default;
 $button-color: rgb(38, 166, 154) !default;
 $body-background-color: #1a1d20 !default;
-@import 'vendor/materialize/materialize';
+@import 'materialize';
 
 @import 'https://fonts.googleapis.com/icon?family=Material+Icons';
 

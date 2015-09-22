@@ -34,13 +34,12 @@ module ApplicationHelper
 
   def period_of_day
     case Time.now.hour
-      when 7..5
+      when 7..17
         'day'
-      when 5..9
+      when 17..21
         'dusk'
       else
         'night'
     end
   end
-
 end

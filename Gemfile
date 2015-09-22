@@ -45,7 +45,6 @@ gem 'validates_formatting_of'
 gem 'activeadmin', github: 'gregbell/active_admin'
 gem 'devise', github: 'plataformatec/devise'
 
-# gem 'materialize-sass'
 
 # Custom
 
@@ -53,7 +52,8 @@ gem 'haml'
 gem 'redcarpet'
 gem 'coderay'
 gem 'autoprefixer-rails'
-
+gem 'active_admin_editor'
+gem 'materialize-sass'
 
 group :development do
   gem 'knife-solo'

@@ -1,5 +1,6 @@
 class PostsController < ApplicationController
   before_action :set_post, only: [:show, :update, :destroy]
+  before_action :find_jumbotron, only: [:index]
 
   helper_method :post
 
@@ -19,6 +20,10 @@ class PostsController < ApplicationController
   end
 
   private
+
+  def find_jumbotron
+    @jumbotron = Jumbotron.last
+  end
 
   # Never trust parameters from the scary internet, only allow the white list through.
   def post_params

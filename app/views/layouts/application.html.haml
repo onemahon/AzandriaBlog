@@ -12,7 +12,7 @@
         = link_to application_name, root_path, id: 'logo-container', class: 'brand-logo'
         %ul.right.hide-on-med-and-down
           - main_navigation.each do |nav_hash|
-            %li= link_to nav_hash[:text], nav_hash[:link]
+            %li= link_to nav_hash[:text], nav_hash[:link], target: '_blank'
         %ul.side-nav#nav-mobile
           - mobile_nav.each do |nav_hash|
             %li= link_to nav_hash[:text], nav_hash[:link]

@@ -3,9 +3,9 @@
     .container
       %br
       %br
-      %h1.header.center This Is My Blog
+      %h1.header.center= @jumbotron.title
       .row.center
-        %h5.header.col.s12.light Cool things, written by me
+        %h5.header.col.s12.light= @jumbotron.subtitle
       .row.center
         = link_to 'Azandria', 'http://azandria.com', class: 'btn-large waves-effect'
   .parallax
