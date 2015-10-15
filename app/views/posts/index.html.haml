@@ -14,10 +14,10 @@
 .container
   .section
     .row
-      - @posts.order(created_at: :desc).first(3).each do |post|
-        .col.s12.m4
-          = render post, :post => post, :shortened => true
-  - @posts.limit(100).order(created_at: :desc).offset(3).each do |post|
+      - first_three_posts.each do |post|
+        .col.s12.m6.l4
+          = render 'post_abstract', :post => post
+  - next_hundred_posts_after_three.each do |post|
     .row
-      .col.s12.m12
-        = render post, :post => post, :shortened => true
+      .col.s12.m12.l12
+        = render 'post_abstract', :post => post

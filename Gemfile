@@ -52,7 +52,6 @@ gem 'haml'
 gem 'redcarpet'
 gem 'coderay'
 gem 'autoprefixer-rails'
-gem 'active_admin_editor'
 gem 'materialize-sass'
 
 group :development do

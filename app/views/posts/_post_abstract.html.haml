@@ -1,0 +1,4 @@
+.post-abstract-card
+  %h3= link_to post.title, post_path(post)
+  = markdown(post.abstract)
+  = l post.created_at, format: :long

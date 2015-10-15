@@ -44,10 +44,6 @@ GEM
       activesupport (= 4.1.4)
       builder (~> 3.1)
       erubis (~> 2.7.0)
-    active_admin_editor (1.1.0)
-      activeadmin (>= 0.4.0)
-      ejs
-      rails (>= 3.0.0)
     activemodel (4.1.4)
       activesupport (= 4.1.4)
       builder (~> 3.1)
@@ -128,7 +124,6 @@ GEM
     coffee-script-source (1.9.1.1)
     colorize (0.7.7)
     diff-lcs (1.2.5)
-    ejs (1.1.1)
     erubis (2.7.0)
     execjs (2.5.2)
     ffi (1.9.8)
@@ -331,7 +326,6 @@ PLATFORMS
   ruby
 
 DEPENDENCIES
-  active_admin_editor
   activeadmin!
   autoprefixer-rails
   bundler

@@ -2,19 +2,7 @@
   .section
     .row
       %h1= post.title
-      -# TODO: markdown doesn't seem to be working correctly
-      %p= MarkdownParser.markdown(content_truncated(post.content)).html_safe
+      %p= markdown(post.content)
       %p= l post.created_at, format: :long
 
       = link_to t('.back'), posts_path, :class => 'btn btn-default'
-
-
-      -#.fieldset
-      -#  %dl
-      -#    %dt.label.label-default= model_class.human_attribute_name(:title)
-      -#    %dd
-      -#      %pre.prettyprint= @post.title
-      -#    %dt.label.label-default= model_class.human_attribute_name(:content)
-      -#    %dd
-      -#      %pre.prettyprint= @post.content
-      -#
