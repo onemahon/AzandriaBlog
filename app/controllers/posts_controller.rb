@@ -22,7 +22,8 @@ class PostsController < ApplicationController
   private
 
   def find_jumbotron
-    @jumbotron = Jumbotron.last
+    @jumbotron = Jumbotron.random_for_current_time ||
+      Jumbotron.where(time_period_type: Jumbotron::TIME_PERIOD_TYPES::DEFAULT).last
   end
 
   # Never trust parameters from the scary internet, only allow the white list through.

@@ -23,6 +23,14 @@ template "#{path}/database.yml" do
   group node['group']
 end
 
+# Set up Cloudinary app config file
+template "#{path}/cloudinary.yml" do
+  source "cloudinary.yml.erb"
+  mode 0640
+  owner node['user']['name']
+  group node['group']
+end
+
 # set unicorn config
 template "/etc/init.d/unicorn_#{node['app']}" do
   source "unicorn.sh.erb"

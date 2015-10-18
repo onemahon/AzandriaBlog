@@ -68,3 +68,7 @@ crashlytics-build.properties
 
 # Ignore secrets, capistrano-secrets will handle it
 /config/secrets.yml
+
+# Other app secrets and local passwords files
+/config/cloudinary.yml
+/config/database.yml

@@ -9,7 +9,7 @@
       .row.center
         = link_to 'Azandria', 'http://azandria.com', class: 'btn-large waves-effect'
   .parallax
-    = image_tag random_jumbotron_image, alt: 'Main Image', class: 'parallax-image'
+    = image_tag @jumbotron.image_url, alt: 'Main Image', class: 'parallax-image'
 
 .container
   .section

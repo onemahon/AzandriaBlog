@@ -24,22 +24,4 @@ module ApplicationHelper
   def mobile_nav
     main_navigation
   end
-
-  def random_jumbotron_image
-    period = period_of_day
-
-    file_names = Dir.glob("app/assets/images/headers/#{period}/*").map{|f| File.basename(f) }
-    "headers/#{period}/#{file_names.shuffle.first}"
-  end
-
-  def period_of_day
-    case Time.now.hour
-      when 7..17
-        'day'
-      when 17..21
-        'dusk'
-      else
-        'night'
-    end
-  end
 end

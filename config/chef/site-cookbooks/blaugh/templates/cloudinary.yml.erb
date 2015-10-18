@@ -1,0 +1,18 @@
+development:
+  cloud_name: azandriacloud
+  api_key: <%= node['cloudinary']['api_key'] %>
+  api_secret: <%= node['cloudinary']['api_secret'] %>
+  enhance_image_tag: true
+  static_image_support: false
+production:
+  cloud_name: azandriacloud
+  api_key: <%= node['cloudinary']['api_key'] %>
+  api_secret: <%= node['cloudinary']['api_secret'] %>
+  enhance_image_tag: true
+  static_image_support: true
+test:
+  cloud_name: azandriacloud
+  api_key: <%= node['cloudinary']['api_key'] %>
+  api_secret: <%= node['cloudinary']['api_secret'] %>
+  enhance_image_tag: true
+  static_image_support: false
