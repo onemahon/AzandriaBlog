@@ -1,5 +1,5 @@
 .parallax-container#index-banner
-  .section.no-pad-bot
+  .section.no-pad-bot.no-pad-top
     .container
       %br
       %br
@@ -8,6 +8,8 @@
         %h5.header.col.s12.light= @jumbotron.subtitle
       .row.center
         = link_to 'Azandria', 'http://azandria.com', class: 'btn-large waves-effect'
+      - if @jumbotron.quote.present?
+        .row.center.jumbotron-quote= @jumbotron.quote.html_safe
   .parallax
     = image_tag @jumbotron.image_url, alt: @jumbotron.image_description,
       title: @jumbotron.image_description, class: 'parallax-image'

@@ -38,7 +38,7 @@ gem 'carrierwave'
 #
 gem 'sass-rails', '~> 5.0'
 gem 'haml'
-gem 'materialize-sass'
+gem 'materialize-sass', '~> 0.97.1'
 gem 'jquery-rails'
 gem 'coffee-rails', '~> 4.0.0'
 #
