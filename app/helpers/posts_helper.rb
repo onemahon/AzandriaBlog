@@ -8,6 +8,6 @@ module PostsHelper
   end
 
   def markdown(markdown_text)
-    MarkdownParser.markdown(markdown_text)
+    find_and_preserve MarkdownParser.markdown(markdown_text)
   end
 end

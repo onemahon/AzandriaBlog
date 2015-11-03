@@ -1,0 +1,17 @@
+// Media Query sizes
+$small-down: "(max-width : #{$small-screen})";
+$small-up: "(min-width : #{$small-screen-up})";
+$medium-down: "(max-width : #{$medium-screen})";
+$medium-up: "(min-width : #{$medium-screen-up})";
+
+// Markdown code sections
+$fenced-code-background-color: $body-background-color-dark;
+$fenced-code-border-color: rgba(112, 139, 136, 0.29);
+$fenced-code-text-color: #708b88;
+
+$inline-code-background-color: $body-background-color-dark;
+$inline-code-border-color: rgba(112, 139, 136, 0.29);
+$inline-code-text-color: #708b88;
+
+// Miscellaneous colors
+$emphasis-light-color: #ededed;

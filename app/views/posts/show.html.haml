@@ -3,7 +3,7 @@
     .row.post-title
       %h1= post.title
     .divider
-    .row
+    .row.post-content
       .col.s12.m8.l6.offset-s0.offset-m2.offset-l3
         %p= markdown(post.content)
         %p= l post.created_at, format: :long

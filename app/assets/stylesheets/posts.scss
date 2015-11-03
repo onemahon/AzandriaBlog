@@ -20,8 +20,12 @@
     }
 
     .post-abstract-card {
-      background-color: #1e1e1e;
+      background-color: $body-background-color-dark;
       padding: 5px 25px 30px;
+
+      .post-content {
+        @import "markdown_styles";
+      }
     }
 
     .parallax-container {
@@ -31,6 +35,10 @@
     }
   }
   &.show {
+    .post-content {
+      @import "markdown_styles";
+    }
+
     .post-title {
       text-align: center;
     }
