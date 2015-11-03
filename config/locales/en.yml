@@ -20,6 +20,10 @@
 # available at http://guides.rubyonrails.org/i18n.html.
 
 en:
+  layouts:
+    application:
+      site_description: Meet Joe Mahon, developer.
+
   posts:
     index:
       azandria_button: Azandria

@@ -1,23 +1,41 @@
-//= require posts
-
 // Handy tool: http://www.sasstoscss.com/
-//
+
+//////
+// Materialize Overwrites:
 @import "materialize/components/color";
 $primary-color: color("grey", "darken-4") !default;
 $link-color: rgb(38, 166, 154) !default;
 $button-color: rgb(38, 166, 154) !default;
 $body-background-color: #1a1d20 !default;
+//
+@import "materialize/components/variables";
+$small-screen-up: 641px !default;
+$medium-screen-up: 1025px !default;
+$large-screen-up: 1201px !default;
+$small-screen: 640px !default;
+$medium-screen: 1024px !default;
+$large-screen: 1200px !default;
+//
+////////
+
+////////
+// Local plugin imports
 @import 'materialize';
+//
+///////
 
+///////
+// Project imports
+@import 'variables';
+@import 'posts';
+//
+///////
+
+///////
+// External imports
 @import 'https://fonts.googleapis.com/icon?family=Material+Icons';
-
-/* Custom Stylesheet */
-/**
- * Use this file to override Materialize files so you can update
- * the core Materialize files in the future
- *
- * Made By MaterializeCSS.com
- */
+//
+///////
 
 body {
   background-color: #212121;
@@ -28,34 +46,8 @@ hr {
   border-color: #414141;
 }
 
-.parallax-container {
-  min-height: 500px;
-  line-height: 0;
-  height: auto;
-  color: rgba(255,255,255,.9);
-
-  .section {
-    width: 100%;
-
-    @media only screen and (max-width: 992px) {
-      position: absolute;
-      top: 40%;
-    }
-  }
-
-  @media only screen and (max-width : 600px) {
-    min-height: 400px;
-  }
-}
-
-#index-banner .section {
-  @media only screen and (max-width : 992px) {
-    top: 10%;
-  }
-
-  @media only screen and (max-width : 600px) {
-    top: 0;
-  }
+nav {
+  background-color: #1e1e1e;
 }
 
 .footer-container {
@@ -70,4 +62,32 @@ hr {
   }
 }
 
+#index-banner .section {
+  @media #{$medium-down} {
+    top: 10%;
+  }
 
+  @media #{$small-down} {
+    top: 0;
+  }
+}
+
+.parallax-container {
+  min-height: 500px;
+  line-height: 0;
+  height: auto;
+  color: rgba(255,255,255,.9);
+
+  .section {
+    width: 100%;
+
+    @media #{$medium-down} {
+      position: absolute;
+      top: 40%;
+    }
+  }
+
+  @media #{$small-down} {
+    min-height: 400px;
+  }
+}
