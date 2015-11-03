@@ -12,6 +12,6 @@ class JumbotronUploader < CarrierWave::Uploader::Base
 
   version :widescreen do
     process convert: 'jpg'
-    process resize_to_fill: [2560, 480]
+    process resize_to_fill: [1800, 800]
   end
 end

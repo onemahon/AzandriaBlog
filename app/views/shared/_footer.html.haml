@@ -1,0 +1,7 @@
+.row.footer-container
+  .container
+    .row
+      - main_navigation.each do |nav_hash|
+        %li= link_to nav_hash[:text], nav_hash[:link], target: '_blank'
+    .row mahonjd AT gmail DOT com
+    .row 2015

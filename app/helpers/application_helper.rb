@@ -15,8 +15,12 @@ module ApplicationHelper
         link: 'http://twitter.com/onemahon'
       },
       {
-        text: 'linked in',
-        link: 'https://www.linkedin.com/in/josephmahon'
+          text: 'linked in',
+          link: 'https://www.linkedin.com/in/josephmahon'
+      },
+      {
+          text: 'flickr',
+          link: 'https://www.flickr.com/photos/59680343@N03/'
       }
     ]
   end

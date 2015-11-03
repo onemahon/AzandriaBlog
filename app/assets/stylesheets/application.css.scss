@@ -28,44 +28,46 @@ hr {
   border-color: #414141;
 }
 
-.parallax-image {
-  // TODO: shrinks / skews image on mobile
-  width: 100%;
-}
-
 .parallax-container {
-  min-height: 380px;
+  min-height: 500px;
   line-height: 0;
   height: auto;
   color: rgba(255,255,255,.9);
-}
-.parallax-container .section {
-  width: 100%;
+
+  .section {
+    width: 100%;
+
+    @media only screen and (max-width: 992px) {
+      position: absolute;
+      top: 40%;
+    }
+  }
+
+  @media only screen and (max-width : 600px) {
+    min-height: 400px;
+  }
 }
 
-@media only screen and (max-width : 992px) {
-  .parallax-container .section {
-    position: absolute;
-    top: 40%;
-  }
-  #index-banner .section {
+#index-banner .section {
+  @media only screen and (max-width : 992px) {
     top: 10%;
   }
-}
 
-@media only screen and (max-width : 600px) {
-  #index-banner .section {
+  @media only screen and (max-width : 600px) {
     top: 0;
   }
 }
 
-.icon-block {
-  padding: 0 15px;
-}
-.icon-block .material-icons {
-  font-size: inherit;
+.footer-container {
+  background-color: #1e1e1e;
+  color: #909090;
+  min-height: 300px;
+  padding-top: 30px;
+
+  a {
+    color: #47756c;
+    text-decoration: underline;
+  }
 }
 
-footer.page-footer {
-  margin: 0;
-}
+

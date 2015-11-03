@@ -1,26 +1,40 @@
-.posts.index {
-  .jumbotron-quote {
-    line-height: initial;
-    margin-bottom: 20px;
-    text-shadow: 0px 2px 2px rgba(20, 20, 20, 0.3);
+.posts {
 
-    @media only screen and (min-width : 600px) {
-      margin-top: 40px;
-    }
-
-    @media only screen and (min-width : 992px) {
-      margin-top: 90px;
-    }
+  .divider {
+    background-color: #363636;
+    margin-bottom: 10px;
   }
 
-  .post-abstract-card {
-    background-color: #1e1e1e;
-    padding: 5px 25px 30px;
-  }
+  &.index {
+    .jumbotron-quote {
+      line-height: initial;
+      margin-bottom: 20px;
+      text-shadow: 0px 2px 2px rgba(20, 20, 20, 0.3);
 
-  .parallax-container {
-    h1, h5 {
-      text-shadow: 0px 5px 9px rgba(20, 20, 20, 0.5);
+      @media only screen and (min-width : 600px) {
+        margin-top: 150px;
+      }
+
+      @media only screen and (min-width : 992px) {
+        margin-top: 200px;
+      }
+    }
+
+    .post-abstract-card {
+      background-color: #1e1e1e;
+      padding: 5px 25px 30px;
+    }
+
+    .parallax-container {
+      h1, h5 {
+        text-shadow: 0px 5px 9px rgba(20, 20, 20, 0.5);
+      }
+    }
+  }
+  &.show {
+    .post-title {
+      text-align: center;
     }
   }
 }
+

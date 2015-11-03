@@ -7,11 +7,11 @@
       .row.center
         %h5.header.col.s12.light= @jumbotron.subtitle
       .row.center
-        = link_to 'Azandria', 'http://azandria.com', class: 'btn-large waves-effect'
+        = link_to t('.azandria_button'), 'http://azandria.com', class: 'btn-large waves-effect'
       - if @jumbotron.quote.present?
         .row.center.jumbotron-quote= @jumbotron.quote.html_safe
   .parallax
-    = image_tag @jumbotron.image_url, alt: @jumbotron.image_description,
+    = image_tag @jumbotron.image_url(:widescreen), alt: @jumbotron.image_description,
       title: @jumbotron.image_description, class: 'parallax-image'
 
 .container
@@ -19,8 +19,8 @@
     .row
       - first_three_posts.each do |post|
         .col.s12.m6.l4
-          = render 'post_abstract', :post => post
+          = render 'post_abstract', post: post
   - next_hundred_posts_after_three.each do |post|
     .row
       .col.s12.m12.l12
-        = render 'post_abstract', :post => post
+        = render 'post_abstract', post: post
