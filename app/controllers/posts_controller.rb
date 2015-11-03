@@ -1,6 +1,7 @@
 class PostsController < ApplicationController
   before_action :set_post, only: [:show, :update, :destroy]
   before_action :find_jumbotron, only: [:index]
+  before_action :find_page_title, only: [:show]
 
   helper_method :post
 
@@ -24,6 +25,10 @@ class PostsController < ApplicationController
   def find_jumbotron
     @jumbotron = Jumbotron.random_for_current_time ||
       Jumbotron.where(time_period_type: Jumbotron::TIME_PERIOD_TYPES::DEFAULT).last
+  end
+
+  def find_page_title
+    @page_title = @post.title
   end
 
   # Never trust parameters from the scary internet, only allow the white list through.

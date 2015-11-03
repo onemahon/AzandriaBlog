@@ -1,11 +1,15 @@
 module ApplicationHelper
-
   def application_name
     'Azandria Blog.'
   end
 
   def page_title
-    'Joe Mahon\'s Blog'
+    if @page_title.present?
+      "#{@page_title} | Joe Mahon's Blog"
+    else
+      'Joe Mahon\'s Blog'
+    end
+
   end
 
   def main_navigation
