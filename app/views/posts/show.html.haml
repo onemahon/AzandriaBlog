@@ -6,8 +6,9 @@
     .row.post-content
       .col.s12.m8.l6.offset-s0.offset-m2.offset-l3
         %p= markdown(post.content)
-        .tags
-          = "Tags: #{tags_links(post)}".html_safe
+        - if post.tags.present?
+          .tags
+            = "Tags: #{tags_links(post)}".html_safe
         %p= l post.created_at, format: :long
 
         = link_to t('.back'), posts_path, class: 'btn btn-default'
