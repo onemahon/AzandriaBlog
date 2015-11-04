@@ -1,5 +1,6 @@
 Rails.application.routes.draw do
   resources :posts, only: [ :index, :show ]
+  resources :tags, only: [ :show ]
 
   devise_for :admin_users, ActiveAdmin::Devise.config
   ActiveAdmin.routes(self)

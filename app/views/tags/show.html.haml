@@ -1,0 +1,8 @@
+.container
+  .section
+    - if @posts.empty?
+      = "No items found for \"#{link_to @tag.name, @tag}\".".html_safe
+    - @posts.each do |post|
+      .row
+        .col.s12.m12.l12
+          = render 'posts/post_abstract', post: post
