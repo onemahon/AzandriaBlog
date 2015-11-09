@@ -7,7 +7,7 @@
       .row.center
         %h5.header.col.s12.light= @jumbotron.subtitle
       .row.center
-        = link_to t('.azandria_button'), 'http://azandria.com', class: 'btn-large waves-effect'
+        = link_to t('.azandria_button'), 'http://azandria.com', class: 'btn-large waves-effect', target: '_blank'
       - if @jumbotron.quote.present?
         .row.center.jumbotron-quote= @jumbotron.quote.html_safe
   .parallax
