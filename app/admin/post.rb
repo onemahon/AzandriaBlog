@@ -14,6 +14,11 @@ ActiveAdmin.register Post do
       end
     end
 
+    f.panel 'Published' do
+      f.para 'Check the box below to make the post visible to the public.'
+      f.input :published
+    end
+
     f.actions
   end
 end

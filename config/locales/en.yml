@@ -9,6 +9,7 @@ en:
 
     show:
       back: Back
+      tags: 'Tags: %{tags}'
 
   time:
     formats:

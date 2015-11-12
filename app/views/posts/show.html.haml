@@ -1,17 +1,17 @@
 .container
   .section
     .row.post-title
-      %h1= post.title
+      %h1= @post.title
     .divider
     .row.post-content
-      .col.s12.m8.l6.offset-s0.offset-m2.offset-l3
-        %p= markdown(post.content)
+      .col.s12.m8.l10.offset-s0.offset-m2.offset-l1
+        %p= markdown(@post.content)
         %hr
-        - if post.tags.present?
+        - if @post.tags.present?
           .tags
-            = "Tags: #{tags_links(post)}".html_safe
+            = t('.tags', tags: tags_links(@post)).html_safe
         %hr
-        %p= l post.created_at, format: :long
+        %p= l @post.created_at, format: :long
 
         = link_to t('.back'), posts_path, class: 'btn btn-default'
 

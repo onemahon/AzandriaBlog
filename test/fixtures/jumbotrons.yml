@@ -1,11 +1,33 @@
 # Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
 
-one:
-  title: MyString
-  subtitle: MyString
-  image: MyString
+day:
+  title: This Is My Blog
+  subtitle: Cool things, written by me
+  image: Not availble
+  image_description: Day picture
+  time_period_type: day
+  quote: So was I once myself a swinger of birches
 
-two:
-  title: MyString
-  subtitle: MyString
-  image: MyString
+dusk:
+  title: This Is My Blog
+  subtitle: Cool things, written by me
+  image: Not availble
+  image_description: Dusk picture
+  time_period_type: dusk
+  quote: So was I once myself a swinger of birches
+
+night:
+  title: This Is My Blog
+  subtitle: Cool things, written by me
+  image: Not availble
+  image_description: Night picture
+  time_period_type: night
+  quote: So was I once myself a swinger of birches
+
+default:
+  title: This Is My Blog
+  subtitle: Cool things, written by me
+  image: Not availble
+  image_description: Default picture
+  time_period_type: default
+  quote: So was I once myself a swinger of birches

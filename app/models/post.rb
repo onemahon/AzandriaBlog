@@ -9,11 +9,13 @@ class Post < ActiveRecord::Base
   accepts_nested_attributes_for :post_tags, allow_destroy: true
 
   scope :for_tag, -> (tag) { joins(:post_tags).merge(PostTag.where(tag: tag)) }
+  scope :published, -> { where(published: true) }
 
   def self.params
     [
       :abstract,
       :content,
+      :published,
       :title
     ]
   end

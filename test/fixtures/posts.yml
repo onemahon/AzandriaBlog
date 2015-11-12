@@ -1,9 +1,12 @@
 # Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
 
-one:
-  title: MyString
-  content: MyText
+published:
+  abstract: Test post...
+  content: Test post content
+  published: true
+  title: Published blog post
 
-two:
-  title: MyString
-  content: MyText
+unpublished:
+  abstract: Test post...
+  content: Test post content
+  title: Published blog post
