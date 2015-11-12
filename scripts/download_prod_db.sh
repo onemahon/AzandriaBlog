@@ -10,6 +10,7 @@ createdb azandria_blaugh_latest
 
 psql azandria_blaugh_latest < production_backup.dbdump
 
+dropdb azandria_blaugh_development --if-exists
 createdb -T azandria_blaugh_latest azandria_blaugh_development
 
 rm production_backup.dbdump
