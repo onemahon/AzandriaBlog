@@ -19,11 +19,12 @@ class Jumbotron < ActiveRecord::Base
 
   def self.params
     [
-      :title,
-      :subtitle,
       :image,
       :image_description,
-      :time_period_type
+      :quote,
+      :subtitle,
+      :time_period_type,
+      :title
     ]
   end
 
