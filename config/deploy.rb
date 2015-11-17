@@ -1,7 +1,7 @@
 lock "3.4.0"
 
 set :application, "blaugh"
-set :repo_url, "git@bitbucket.org:onemahon/azandria-blaugh.git"
+set :repo_url, "git@github.com:onemahon/AzandriaBlog.git"
 
 set :deploy_to, "/var/www/#{fetch(:application)}"
 set :deploy_user, "rincewind"

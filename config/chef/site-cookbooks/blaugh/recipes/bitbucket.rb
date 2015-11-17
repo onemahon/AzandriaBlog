@@ -1,21 +1,4 @@
 
-# TODO: add this machine's ssh key to bitbucket API
-
-
-# deploy_key "bitbucket_key" do
-#   provider Chef::Provider::DeployKeyBitbucket
-#   path "/home/#{node['user']['name']}/.ssh"
-#   credentials({
-#     :token => 'my_bitbucket_oauth_token'
-#   })
-#   repo node['bitbucket_repo']
-#   owner node['user']['name']
-#   group node['group']
-#   mode '0640'
-#   action :add
-# end
-
-
 chef_gem 'httparty' do
   compile_time false
 end
