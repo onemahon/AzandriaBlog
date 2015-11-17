@@ -6,11 +6,5 @@ class CreateJumbotrons < ActiveRecord::Migration
 
       t.timestamps
     end
-
-    reversible do |direction|
-      direction.up do
-        Jumbotron.new(title: 'This Is My Blog', subtitle: 'Cool things, written by me').save
-      end
-    end
   end
 end
