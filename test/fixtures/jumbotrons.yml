@@ -6,7 +6,9 @@ day:
   image: Not availble
   image_description: Day picture
   time_period_type: day
-  quote: So was I once myself a swinger of birches
+  quote: So was I once myself a swinger of birches..
+  quote_text_full: So was I once myself a swinger of birches (this is the full text)
+  quote_text_author: Joe Mahon
 
 dusk:
   title: This Is My Blog
@@ -14,7 +16,9 @@ dusk:
   image: Not availble
   image_description: Dusk picture
   time_period_type: dusk
-  quote: So was I once myself a swinger of birches
+  quote: So was I once myself a swinger of birches..
+  quote_text_full: So was I once myself a swinger of birches (this is the full text)
+  quote_text_author: Joe Mahon
 
 night:
   title: This Is My Blog
@@ -22,7 +26,9 @@ night:
   image: Not availble
   image_description: Night picture
   time_period_type: night
-  quote: So was I once myself a swinger of birches
+  quote: So was I once myself a swinger of birches..
+  quote_text_full: So was I once myself a swinger of birches (this is the full text)
+  quote_text_author: Joe Mahon
 
 default:
   title: This Is My Blog
@@ -30,4 +36,6 @@ default:
   image: Not availble
   image_description: Default picture
   time_period_type: default
-  quote: So was I once myself a swinger of birches
+  quote: So was I once myself a swinger of birches..
+  quote_text_full: So was I once myself a swinger of birches (this is the full text)
+  quote_text_author: Joe Mahon

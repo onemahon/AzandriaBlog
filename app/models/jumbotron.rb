@@ -22,6 +22,9 @@ class Jumbotron < ActiveRecord::Base
       :image,
       :image_description,
       :quote,
+      :quote_text_author,
+      :quote_text_full,
+      :quote_text_title,
       :subtitle,
       :time_period_type,
       :title

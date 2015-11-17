@@ -28,8 +28,12 @@ $large-screen: 1200px;
 
 ///////
 // Project imports
+// (global first)
 @import 'variables';
 @import 'mixins';
+
+// (pages / components)
+@import 'jumbotrons';
 @import 'posts';
 //
 ///////
@@ -81,6 +85,10 @@ nav {
   line-height: 0;
   height: auto;
   color: rgba(255,255,255,.9);
+
+  a {
+    color: rgba(255,255,255,.9);
+  }
 
   .section {
     width: 100%;

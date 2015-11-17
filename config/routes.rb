@@ -4,6 +4,7 @@ Rails.application.routes.draw do
 
   root 'posts#index'
 
+  resources :jumbotrons, only: [ :show ]
   resources :posts, only: [ :index, :show ]
   resources :tags, only: [ :show ]
 

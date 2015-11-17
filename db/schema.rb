@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20151112052735) do
+ActiveRecord::Schema.define(version: 20151117213624) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -58,6 +58,9 @@ ActiveRecord::Schema.define(version: 20151112052735) do
     t.string   "image_description"
     t.string   "time_period_type"
     t.string   "quote"
+    t.string   "quote_text_author"
+    t.text     "quote_text_full"
+    t.string   "quote_text_title"
   end
 
   create_table "post_tags", force: true do |t|

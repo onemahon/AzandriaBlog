@@ -1,0 +1,28 @@
+// Place all the styles related to the Jumbotrons controller here.
+// They will automatically be included in application.css.
+// You can use Sass (SCSS) here: http://sass-lang.com/
+
+.jumbotrons {
+  &.show {
+    .jumbotron-image {
+      img {
+        width: 100%;
+      }
+    }
+
+    .quote-text {
+      @import "markdown_styles";
+
+      margin-bottom: 40px;
+
+      p {
+        font-size: 13pt;
+        font-family: "Goudy Old Style", "Palatino Linotype", "Book Antiqua", Palatino, serif;
+        font-weight: 100;
+        color: #999999;
+        line-height: 1.8;
+      }
+    }
+  }
+}
+

@@ -1,0 +1,13 @@
+.container
+  .section
+    .row
+      .col.s12.m8.l10.offset-s0.offset-m2.offset-l1
+        .row.center
+          %h3.header.center= @jumbotron.quote_text_title
+          %h5.header.col.s12.light= @jumbotron.quote_text_author
+
+        .jumbotron-image= image_tag @jumbotron.image_url(:widescreen), alt: @jumbotron.image_description,
+          title: @jumbotron.image_description
+
+        .quote-text= markdown(jumbotron_text)
+        = link_to t('.back'), root_path, class: 'btn btn-default'
