@@ -17,4 +17,17 @@ ActiveAdmin.register Jumbotron do
 
     f.actions
   end
+
+  index do
+    selectable_column
+    column :id
+    column :title
+    column :subtitle
+    column :quote
+    column :time_period_type
+    column :image do |jumbotron|
+      link_to image_tag(jumbotron.image_url(:thumbnail)), jumbotron.image_url, target: '_blank'
+    end
+    actions
+  end
 end
