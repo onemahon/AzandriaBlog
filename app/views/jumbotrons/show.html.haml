@@ -6,8 +6,10 @@
           %h3.header.center= @jumbotron.quote_text_title
           %h5.header.col.s12.light= @jumbotron.quote_text_author
 
-        .jumbotron-image= image_tag @jumbotron.image_url(:widescreen), alt: @jumbotron.image_description,
+        .jumbotron-image= image_tag @jumbotron.image_url(:inline_for_post ), alt: @jumbotron.image_description,
           title: @jumbotron.image_description
+
+        %hr
 
         .quote-text= markdown(jumbotron_text)
         = link_to t('.back'), root_path, class: 'btn btn-default'

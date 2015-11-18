@@ -18,7 +18,7 @@ class MarkdownParser
         superscript: true
     }
     markdown_to_html = Redcarpet::Markdown.new(coderayified, options)
-    if text
+    if text.present?
       markdown_to_html.render(text).html_safe if text
     else
       nil
