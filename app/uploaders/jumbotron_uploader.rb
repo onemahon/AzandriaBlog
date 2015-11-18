@@ -19,4 +19,4 @@ class JumbotronUploader < CarrierWave::Uploader::Base
     process convert: 'jpg'
     process resize_to_fill: [1800, 800]
   end
-end 
+end
