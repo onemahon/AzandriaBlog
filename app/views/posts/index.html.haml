@@ -9,7 +9,7 @@
       .row.center
         = link_to t('.azandria_button'), 'http://azandria.com', class: 'btn-large waves-effect', target: '_blank'
       - if @jumbotron.quote.present?
-        .row.center.jumbotron-quote= link_to @jumbotron.quote.html_safe, jumbotron_path(@jumbotron)
+        .row.center.jumbotron-quote= link_to @jumbotron.quote.html_safe, jumbotron_path(@jumbotron), target: '_blank'
   .parallax
     = image_tag @jumbotron.image_url(:widescreen), alt: @jumbotron.image_description,
       title: @jumbotron.image_description, class: 'parallax-image'

@@ -8,7 +8,7 @@ class MarkdownParser
 
   def self.markdown(text)
     # From https://www.codefellows.org/blog/how-to-create-a-markdown-friendly-blog-in-a-rails-app
-    coderayified = CodeRayify.new(filter_html: true, hard_wrap: true)
+    coderayified = CodeRayify.new(filter_html: false, hard_wrap: false)
     options = {
         fenced_code_blocks: true,
         no_intra_emphasis: true,
