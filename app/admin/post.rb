@@ -21,4 +21,15 @@ ActiveAdmin.register Post do
 
     f.actions
   end
+
+  index do
+    selectable_column
+    column :id
+    column :title
+    column :created_at
+    column :updated_at
+    column :abstract
+    column :published
+    actions
+  end
 end
