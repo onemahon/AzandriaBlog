@@ -8,4 +8,5 @@ Rails.application.routes.draw do
   resources :posts, only: [ :index, :show ]
   resources :tags, only: [ :show ]
 
+  get 'sitemap.xml', to: 'sitemap#index', defaults: { format: 'xml' }
 end

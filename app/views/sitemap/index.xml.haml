@@ -1,0 +1,14 @@
+!!! XML
+%urlset{xmlns: "http://www.sitemaps.org/schemas/sitemap/0.9"}
+  - for post in @posts
+    %url
+      %loc #{post_url(post)}/
+      %lastmod=post.updated_at.strftime('%Y-%m-%d')
+      %changefreq weekly
+      %priority 0.5
+  - for jumbotron in @jumbotrons
+    %url
+      %loc #{jumbotron_url(jumbotron)}/
+      %lastmod=jumbotron.updated_at.strftime('%Y-%m-%d')
+      %changefreq monthly
+      %priority 0.5
