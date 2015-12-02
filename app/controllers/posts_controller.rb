@@ -5,7 +5,7 @@ class PostsController < ApplicationController
   before_action :set_page_title, only: [:show]
 
   def index
-    @posts = Post.published
+    @posts = Post.published.recent
   end
 
   def show

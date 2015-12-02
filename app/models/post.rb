@@ -10,6 +10,7 @@ class Post < ActiveRecord::Base
 
   scope :for_tag, -> (tag) { joins(:post_tags).merge(PostTag.where(tag: tag)) }
   scope :published, -> { where(published: true) }
+  scope :recent, -> { order(created_at: :desc) } # TODO, sometime: pagination
 
   def self.params
     [

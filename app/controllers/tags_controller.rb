@@ -10,7 +10,7 @@ class TagsController < ApplicationController
   private
 
   def find_posts
-    @posts = Post.for_tag(@tag)
+    @posts = Post.for_tag(@tag).recent
   end
 
   def find_tag
