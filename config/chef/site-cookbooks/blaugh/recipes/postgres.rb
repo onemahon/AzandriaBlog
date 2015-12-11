@@ -22,3 +22,17 @@ execute "create new postgres database" do
   command "psql -c \"create database #{node['app']} owner #{node['db']['user']['name']};\""
   not_if { `sudo -u postgres psql -tAc \"SELECT * FROM pg_database WHERE datname='#{node['app']}'\" | wc -l`.chomp == "1" }
 end
+
+# TODO: VERY IMPORTANT: app will crash every few days unless otherwise dealt with
+# Postgres logs need to be customized to allow log rotation regularly. That's
+# done in /etc/postgresql/postgresql.conf, with the following properties set to:
+#
+# ```
+# log_truncate_on_rotation = true
+# log_rotation_age = 1d
+# log_rotation_size = 100MB
+# ```
+#
+# This setting should be done through chef somehow, but I'm not sure how to make
+# that happen. Perhaps the same way the template files work? But, if not, I might
+# need to learn a 3rd party recipe that works with postgresql setup.
