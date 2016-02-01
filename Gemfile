@@ -21,6 +21,7 @@ gem 'tzinfo-data'
 gem 'autoprefixer-rails'
 gem 'activeadmin', github: 'gregbell/active_admin'
 gem 'devise', github: 'plataformatec/devise'
+gem 'rails_12factor' # Helpful logging stuff for heroku
 #
 #######
 
