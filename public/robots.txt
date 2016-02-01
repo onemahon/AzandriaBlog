@@ -5,3 +5,7 @@
 # Disallow: /
 
 Sitemap: http://joe.azandria.com/sitemap.xml
+
+#Baiduspider
+User-agent: Baiduspider
+Disallow: /
