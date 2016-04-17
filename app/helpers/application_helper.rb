@@ -25,6 +25,10 @@ module ApplicationHelper
       {
           text: 'flickr',
           link: 'https://www.flickr.com/photos/59680343@N03/'
+      },
+      {
+          text: 'prints',
+          link: 'http://onemahon.imagekind.com/recommended'
       }
     ]
   end
